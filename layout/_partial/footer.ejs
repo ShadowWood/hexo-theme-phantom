@@ -2,9 +2,13 @@
 <footer id="footer">
     <div class="inner">
         <section>
-            <h2>About</h2>
+            <h2>FriendLinks</h2>
             <div>
-                <%- theme.about_footer %>
+                <% if(theme.friendlinks) {
+                    theme.friendlinks.forEach((obj) => {%>
+                        <a href="<%= obj.link %>" target="_blank"><%= obj.name %></a>&nbsp;&nbsp;
+                    <%})
+                }%>
             </div>
         </section>
         <section>
@@ -43,9 +47,9 @@
             </ul>
         </section>
         <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved</li>
+            <li>&copy; 2016 - 2017 All rights reserved</li>
             <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
-            <li>Hexo: <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></li>
+            <li>Shadow Wood</li>
         </ul>
     </div>
 </footer>

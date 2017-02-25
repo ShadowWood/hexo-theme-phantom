@@ -4,10 +4,10 @@
 
 <article class="<%- cssClass %>">
     <span class="image">
-        <img src="<%- item.cover_index || theme.default_cover_index %>" alt="" />
+        <img src="<%- theme.cate_cover_index || theme.default_cover_index %>" alt="" />
     </span>
     <a href="<%- config.root %><%- item.path %>">
-        <h2><%- item.title || theme.default_post_title || "Untitled" %></h2>
+        <h2><%- item.name %></h2>
         <div class="content">
             <p><%- item.subtitle || item.description || "" %></p>
         </div>
