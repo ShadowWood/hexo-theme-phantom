@@ -7,23 +7,20 @@
     <% if(title) { %>
         <div class="archive-title"><%- title %></div>
     <% } %>
-    <ul class="archive-list">
+    <ul class="archive-list time-line">
         <% 
         var dateShow, year, month;
         postList.each(function(item){ 
             item.year = date(item.date, 'YYYY');
-            item.month = date(item.date, 'MM');
             dateShow = false;
             if(item.year !== year) {
                 year = item.year;
                 dateShow = true;
             }
-            if(item.month !== month) {
-                month = item.month;
-                dateShow = true;
-            }
             if(dateShow) {%>
-                <div class="archive-date"><%= year + '-' + month %></div>
+                <li class="time-node archive-date">
+                    <%= year %>
+                </li>
             <%}
             %>
             <%- partial('_partial/article-archive', {item: item}) %>

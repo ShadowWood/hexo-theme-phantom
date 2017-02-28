@@ -1,3 +1,6 @@
-<li>
-    <a href="<%- config.root %><%- item.path %>"><%- item.title || theme.default_post_title || "Untitled" %></a>
+<li class="content-node">
+    <a href="<%- config.root %><%- item.path %>">
+        <%= date(item.date, 'MM-DD') %>&nbsp;&nbsp;
+        <%- item.title || theme.default_post_title || "Untitled" %>
+    </a>
 </li>
