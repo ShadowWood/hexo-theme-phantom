@@ -53,9 +53,17 @@
   width: 6px;
   height: 6px;
   margin-left: -4px;
-  margin-top: -4px;
+  margin-top: -2px;
 }
 
 .time-line li{
   padding-left: 2em;
+}
+
+ul.time-line li.content-node:hover::before{
+  // background: #f2849e !important;
+  width: 8px;
+  height: 8px;
+  margin-left: -5px;
+  margin-top: -3px;
 }
