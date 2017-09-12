@@ -31,3 +31,42 @@
 
     <div class="fb-comments" data-href="<%= url %>" data-num-posts="<%= theme.comments.facebook.comment_count %>" data-width="100%" data-colorscheme="<%= theme.comments.facebook.comment_colorscheme %>"></div>
 <% } %>
+
+<% if(page.comments && theme.comments && theme.comments.gitalk) { %>    
+<hr />
+<h3><%- __('comment')%>:</h3>
+<div id="gitalk-container">
+
+</div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<style>
+.gt-container .gt-header-controls-tip,
+.gt-container a,
+.gt-container .gt-svg svg {
+    color: #585858;
+}
+
+.gt-container .gt-btn,
+.gt-container .gt-btn:hover {
+    background-color: #FFF;
+}
+</style>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script>
+var gitalk = new Gitalk({
+  clientID: '<%= theme.comments.gitalk.clientID %>',
+  clientSecret: '<%= theme.comments.gitalk.clientSecret %>',
+  repo: '<%= theme.comments.gitalk.repo %>',
+  owner: '<%= theme.comments.gitalk.owner %>',
+  admin: [
+      <% theme.comments.gitalk.admin.forEach((a) => { %>
+        '<%= a %>',
+      <%}) %>
+  ],
+  // facebook-like distraction free mode
+  distractionFreeMode: true
+})
+
+gitalk.render('gitalk-container')
+</script>
+<% } %>

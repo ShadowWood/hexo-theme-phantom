@@ -33,15 +33,26 @@ show_dates: true
 # Comments. Choose one by filling up the information
 comments:
   # Disqus comments
-  disqus_shortname: shadowwood
+  # disqus_shortname: shadowwood
   # Facebook comments
   # facebook:
   #   appid: shadowwood
   #   comment_count: 5
   #   comment_colorscheme: light
+  # Gitalk comments
+  gitalk:
+    clientID: 3c20f2c5396af1661cdd
+    clientSecret: 0d22e72a163265bb03f44e550c73d779bc47315f
+    repo: shadowwood.github.io
+    owner: ShadowWood
+    admin:
+      - ShadowWood
 
 # Google Analytics Tracking ID
-google_analytics:
+# google_analytics:
+
+# Baidu Analytics Tracking ID
+baidu_analytics: 818f68a34fb7ee2d3343ec7bce3a06d5
 
 # Social Accounts
 twitter_url: 
