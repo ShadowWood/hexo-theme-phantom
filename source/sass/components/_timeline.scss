@@ -8,7 +8,7 @@
   padding: 2em 0;
   margin-top: 2em;
   margin-bottom: 2em;
-  margin-left: 2%;
+  margin-left: 6em;
   list-style: none;
 }
 .time-line::before {
@@ -38,22 +38,33 @@
   position: absolute;
   left: 0;
   top: 50%;
-  background: #bbb;
-  border-radius: 50%
+  background: #ddd;
+  border-radius: 50%;
+  border: 1px solid #ddd;
 }
 
 .time-line .time-node::before {
-  width: 10px;
-  height: 10px;
-  margin-left: -6px;
-  margin-top: -4px;
+  width: 14px;
+  height: 14px;
+  margin-left: -8px;
+  margin-top: -6px;
 }
 
-.time-line .content-node::before {
-  width: 6px;
-  height: 6px;
-  margin-left: -4px;
-  margin-top: -2px;
+.time-line .content-node {
+
+  >.date {
+    position: absolute;
+    left: -4em;
+  }
+
+  &::before{
+    width: 10px;
+    height: 10px;
+    margin-left: -6px;
+    margin-top: -4px;
+    background-color: #fff;
+    transition: background-color ease 0.2s;
+  }
 }
 
 .time-line li{
@@ -61,9 +72,5 @@
 }
 
 ul.time-line li.content-node:hover::before{
-  // background: #f2849e !important;
-  width: 8px;
-  height: 8px;
-  margin-left: -5px;
-  margin-top: -3px;
+  background: #ddd !important;
 }

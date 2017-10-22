@@ -3,11 +3,10 @@
 %>
 
 <article class="<%- cssClass %>">
-    <span class="image">
-        <img src="<%- theme.cate_cover_index || theme.default_cover_index %>" alt="" />
+    <span class="image" style="background-image: url('<%- item.cover_index || item.img_url || theme.default_cover_index %>')">
     </span>
     <a href="<%- config.root %><%- item.path %>">
-        <h2><%- item.name %></h2>
+        <h2><%- item.name %> <%- item.count %></h2>
         <div class="content">
             <p><%- item.subtitle || item.description || "" %></p>
         </div>
