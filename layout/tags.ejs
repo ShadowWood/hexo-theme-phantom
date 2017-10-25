@@ -3,7 +3,7 @@
   <div>
     <%
     site.tags.forEach(function(tag){%>
-        <a href="<%= config.root + tag.path %>" class="button small"><%= tag.name %></a>
+        <a href="<%= config.root + tag.path %>" class="button small tag"><%= tag.name %></a>
     <%});
     %>
   </div>

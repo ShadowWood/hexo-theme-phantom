@@ -55,6 +55,8 @@
   >.date {
     position: absolute;
     left: -4em;
+    top: calc(50% - 15px);
+    font-size: 18px;
   }
 
   &::before{
@@ -64,6 +66,17 @@
     margin-top: -4px;
     background-color: #fff;
     transition: background-color ease 0.2s;
+  }
+
+  @media screen and (max-width: 480px) {
+    >.description {
+      display: none;
+    } 
+  }
+  
+  >.description {
+    font-size: 12px;
+    font-weight: 200;
   }
 }
 
